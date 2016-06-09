@@ -1,0 +1,35 @@
+#login .container {
+  max-width: 330px;
+}
+.form-signin {
+  padding: 20px 0;
+}
+#menu > a {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 16px;
+  text-decoration: none;
+  color: #555;
+  background: #fff;
+}
+#menu > a:hover {
+  color: #3276B1;
+}
+#menu .glyphicon {
+  font-size: 32px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+#sidebar .panel-heading {
+  cursor: pointer;
+}
+ul.pagination {
+  margin-top: 0;
+}
+.navbar-inverse .navbar-brand {
+	color: #FCFAFA;
+}
+
+input.error{
+	border-color: red;
+}

@@ -1,0 +1,29 @@
+#PAGESPEED
+#1. ADD CHARSET
+AddDefaultCharset UTF-8
+
+#2. ENABLED CACHE CLIENT
+# 7 DAYS
+<FilesMatch ".(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf)$">
+Header set Cache-Control "max-age=604800, public"
+</FilesMatch>
+ 
+# 1 DAYS
+<FilesMatch ".(xml|txt)$">
+Header set Cache-Control "max-age=86400, public, must-revalidate"
+</FilesMatch>
+ 
+# 1 HOURS
+<FilesMatch ".(html|htm)$">
+Header set Cache-Control "max-age=3600, must-revalidate"
+</FilesMatch>
+
+#3. ENABLED GZIP
+php_flag zlib.output_compression on
+<IfModule mod_deflate.c>
+	<FilesMatch ".(js|css)$">
+		SetOutputFilter DEFLATE
+	</FilesMatch>
+</IfModule>
+
+Options -Indexes
